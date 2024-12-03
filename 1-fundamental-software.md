@@ -6,10 +6,11 @@ This file contains the **Fundamental Software** section of my [Setup guide for a
 
 1. [Fundamental Software](#1-fundamental-software)
     1. [Browser](#11-browser)
-    2. [KeePassXC](#12-keepassxc)
-    3. [Windows Subsystem for Linux](#13-windows-subsystem-for-linux)
-    4. [Windows Terminal](#14-windows-terminal)
-    5. [Package Manager](#15-package-manager)
+    2. [Windows Subsystem for Linux](#12-windows-subsystem-for-linux)
+    3. [Windows Terminal](#13-windows-terminal)
+    4. [Package Manager](#14-package-manager)
+    5. [Git & Git Bash](#15-git--git-bash)
+    6. [KeePassXC](#16-keepassxc)
 
 ## 1. Fundamental Software
 
@@ -65,29 +66,11 @@ Set [**Google Chrome**](https://www.google.com/chrome/) preferences as desired a
 
 Set the options of all the above extensions. Use the extensions settings backups/exports stored in the folder `%OneDriveCommercial%\dotfiles\browser\extensions` to better customize the relevant extension.
 
-### 1.2. KeePassXC
-
-[**KeePassXC**](https://keepassxc.org/) is a cross-platform community-driven port of the Windows application [Keepass Password Safe](https://keepass.info/) that I choose to use precisely because it's cross-platform and it allows me to use it on every operating system that I work with.
-
-#### 1.2.1. Installation
-
-[Download](https://keepassxc.org/download/) the latest portable version of [**KeePassXC**](https://keepassxc.org/). Then extract the downloaded archive to the `%USERPROFILE%\AppData\Local\` folder (`%LOCALAPPDATA%`). Rename the new folder to `KeepassXC`.
-
-Inside the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Tools`, create a *shortcut* pointing to the file `%USERPROFILE%\AppData\Local\KeepassXC\KeePassXC.exe` and name it (the *shortcut*) `KeepassXC`. Then, edit the *shortcut* and point its icon to the main icon available on the file `%USERPROFILE%\AppData\Local\KeepassXC\KeePassXC.exe`.
-
-#### 1.2.2. Configuration
-
-Set [**KeePassXC**](https://keepassxc.org/) preferences (`Tools->Settings`) as desired but make sure to enable the `Browser Integrations`. Then, setup [KeePassXC-Browser](https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk) extension to integrate it with the machine's installation of [**KeePassXC**](https://keepassxc.org/).
-
-#### 1.2.3. Upgrade
-
-To upgrade [**KeepassXC**](https://keepassxc.org/), delete all files and folders inside the folder `%USERPROFILE%\AppData\Local\KeepassXC`, **EXCEPT** the folder `config`, and then extract the content of the archive of the new version to that `KeepassXC` folder.
-
-### 1.3. Windows Subsystem for Linux
+### 1.2. Windows Subsystem for Linux
 
 [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/windows/wsl/) lets developers run a GNU/Linux environment directly on Windows.
 
-#### 1.3.1. Installation
+#### 1.2.1. Installation
 
 Follow the [Official instructions](https://learn.microsoft.com/windows/wsl/install-manual) to manually [enable](https://learn.microsoft.com/windows/wsl/install-manual#step-1---enable-the-windows-subsystem-for-linux) the [**WSL**](https://learn.microsoft.com/windows/wsl/), executing the upcoming command on a PowerShell console with *administrator privileges*.
 
@@ -133,7 +116,7 @@ If [Ubuntu](https://ubuntu.com/) is not running with [**WSL 2**](https://learn.m
 >
 > + **{DISTRO_NAME}** : Name of the Linux distribution to be executed with WSL 2
 
-#### 1.3.2. Configuration
+#### 1.2.2. Configuration
 
 Once the process of installing [Ubuntu](https://ubuntu.com/) on [**WSL**](https://learn.microsoft.com/windows/wsl/) is complete, open the distribution using the *Start Menu*. You will be asked to [create a User and Password](https://learn.microsoft.com/windows/wsl/setup/environment#set-up-your-linux-username-and-password) for your [Ubuntu](https://ubuntu.com/) installation.
 
@@ -163,7 +146,7 @@ To enable the changes made on the `wsl.conf` file, youl will need to to restart 
 
 The article [Set up a WSL development environment](https://learn.microsoft.com/windows/wsl/setup/environment) has some good optional advices to setup a development environment with  [**WSL**](https://learn.microsoft.com/windows/wsl/), but one that is almost mandatory is the installation of the [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701).
 
-#### 1.3.3. Update, upgrade and install additional packages
+#### 1.2.3. Update, upgrade and install additional packages
 
 It's recommended to regularly update and upgrade your packages using [Ubuntu](https://ubuntu.com/)'s package manager. This is done with the following command:
 
@@ -179,19 +162,19 @@ To verify if the `build-essentials` installation was properly made, check the ou
 
     gcc --version
 
-### 1.4. Windows Terminal
+### 1.3. Windows Terminal
 
 The [**Windows Terminal**](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) is a terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL. Its main features include multiple tabs, panes, Unicode and UTF-8 character support, a GPU accelerated text rendering engine, and custom themes, styles, and configurations.
 
-#### 1.4.1. Installation
+#### 1.3.1. Installation
 
 Open the [Microsoft Store](https://aka.ms/wslstore) and install the [**Windows Terminal**](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701).
 
-### 1.5. Package Manager
+### 1.4. Package Manager
 
 A package manager is a software that easily automates the installation, upgradation, and configuration of third-party software or dependencies. [**Chocolatey**](https://chocolatey.org/) and [**winget**](https://github.com/microsoft/winget-cli) are both package managers for Windows software. Nowadays, I prefer [**winget**](https://github.com/microsoft/winget-cli) over [**Chocolatey**](https://chocolatey.org/) because [**winget**](https://github.com/microsoft/winget-cli) can be used to install software from the [Microsoft Store](https://apps.microsoft.com/home).
 
-#### 1.5.1. Install winget
+#### 1.4.1. Install winget
 
 Windows Package Manager [**winget**](https://github.com/microsoft/winget-cli) command-line tool is available on Windows 11 and modern versions of Windows 10 as a part of the [App Installer](https://apps.microsoft.com/detail/9NBLGGH4NNS1). To check if [**winget**](https://github.com/microsoft/winget-cli) is available, open a PowerShell console and execute the following command:
 
@@ -213,7 +196,7 @@ When running [**winget**](https://github.com/microsoft/winget-cli) without admin
 
 Check the [official documentation](https://learn.microsoft.com/windows/package-manager/winget/) to know the full potential of [**winget**](https://github.com/microsoft/winget-cli).
 
-#### 1.5.2. Install Scoop
+#### 1.4.2. Install Scoop
 
 [**Scoop**](https://scoop.sh/) installs programs from the command line with a minimal amount of friction as it doesn't require Admin privileges.
 
@@ -242,11 +225,11 @@ To list all apps installed with [**Scoop**](https://scoop.sh/), execute the foll
 
     scoop list
 
-#### 1.5.3. Install Chocolatey
+#### 1.4.3. Install Chocolatey
 
 If you are going to do your development work on the `Windows Native File System` (instead of doing it exclusively on the `WSL File System`) you should also install [**Chocolatey**](https://chocolatey.org/).
 
-Before proceeding with the installation of [**Chocolatey**](https://chocolatey.org/), you must ensure **Get-ExecutionPolicy** is not ***Restricted***. The upcoming command, executed on a PowerShell console with *Administrator* priviliges. will output the current [execution policy](https://go.microsoft.com/fwlink/?LinkID=135170).
+Before proceeding with the installation of [**Chocolatey**](https://chocolatey.org/), you must ensure **Get-ExecutionPolicy** is not ***Restricted***. The upcoming command, executed on a PowerShell console with *Administrator* privileges. will output the current [execution policy](https://go.microsoft.com/fwlink/?LinkID=135170).
 
     Get-ExecutionPolicy
 
@@ -254,7 +237,7 @@ If the output of the above command shows ***Restricted***, then run the followin
 
     Set-ExecutionPolicy Bypass -Scope Process
 
-Or the prefarable upcoming command, for quite a [bit more security](https://chocolatey.org/install).
+Or the preferable upcoming command, for quite a [bit more security](https://chocolatey.org/install).
 
     Set-ExecutionPolicy AllSigned
 
@@ -265,3 +248,228 @@ Then, on the same PowerShell console, execute the below command to install [**Ch
 To list the installed chocolatey packages, execute the following command on a PowerShell console:
 
     choco list
+
+### 1.5. Git & Git Bash
+
+[**Git**](https://git-scm.com/) is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+
+#### 1.5.1. Installation
+
+##### 1.5.1.1. Installation on the WSL File System
+
+[**Git**](https://git-scm.com/) is included on the [Ubuntu](https://ubuntu.com/) submodule of [WSL](https://learn.microsoft.com/windows/wsl/), therefore, it's not necessary to install it on the `WSL File System`.
+
+##### 1.5.1.2. Installation on the Windows Native File System
+
+**Git Bash** comes included as part of the [Git's Windows package](https://git-scm.com/download/win) and is an application for Microsoft Windows environments which provides an emulation layer for a [**Git**](https://git-scm.com/) command line experience.
+
+[**Git**](https://git-scm.com/), as stated on the [official downloads page](https://git-scm.com/download/win), can be installed on the `Windows Native File System` with [**winget**](https://github.com/microsoft/winget-cli). To [**Git**](https://git-scm.com/), open a PowerShell console and execute the following commands:
+
+    winget install --id Git.Git -e --source winget
+
+The above command will start the [**Git**](https://git-scm.com/) installation wizard that will prompt you with a few questions.
+
+On the *Select Start Menu Folder* step of the installation program, insert the following text on the input box:
+
++ Development
+
+On the *Select Components* step of the installation program, make sure that you will only check the following checkboxes:
+
++ Git LFS (Large File Support);
++ Associate .git* configuration files with the default text editor;
++ Associate .sh files to be run with Bash
++ Add a Git Bash Profile for Windows Terminal
++ Scalar (Git add-on to manage large-scale repositories)
+
+On the *Choosing the default editor used by Git* step of the installation program, select the following text editor:
+
++ Nano editor
+
+On the *Adjusting the name of the initial branch in new repositories* step of the installation program, select the following option:
+
++ Let Git decide
+
+On the *Adjusting your PATH environment* step of the installation program, select the following option:
+
++ Git from the command line and also from 3rd-party software
+
+On the *Choosing the SSH executable* step of the installation program, select the following option:
+
++ Use bundled OpenSSH
+
+On the *Choosing HTTPS transport backend* step of the installation program, select the following option:
+
++ Use the OpenSSL library
+
+On the *Configuring the line ending conversions* step of the installation program, select the following option:
+
++ Checkout Windows-style, commit Unix-style line endings
+
+On the *Configuring the terminal emulator to use with Git Bash* step of the installation program, select the following option:
+
++ Use MinTTY (the default terminal of MSYS2)
+
+On the *Choose the default behavior of 'git pull'* step of the installation program, select the following option:
+
++ Rebase
+
+On the *Choose a credential helper* step of the installation program, select the following option:
+
++ Git Credential Manager
+
+On the *Configuring extra options* step of the installation program, check the following checkboxes:
+
++ Enable file system caching
++ Enable symbolic links
+
+On the *Configuring experimental options* step of the installation program, keep all the checkboxes unchecked.
+
+When the installation is complete, configure the **Git Bash** profile on the [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701).
+
+#### 1.5.2. Bash prompt customization
+
+##### 1.5.2.1. Bash prompt customization on the WSL File System
+
+The customization of the bash prompt is very personal and the files used to accomplish my personal customization on the `WSL File System` are stored at the folder `%OneDriveCommercial%\dotfiles\bash-wsl`. To make use of the mentioned files on the bash prompt customization, replace the **{LABEL}** in the upcoming command as appropriate and then execute it from an [Ubuntu](https://ubuntu.com/) terminal.
+
+    mkdir -p ~/.bash_"$USER" && cp -r {ONEDRIVE_COMMERCIAL_PATH}/dotfiles/bash-wsl/* ~/.bash_"$USER"
+
+> **Label Definition**
+>
+> + **{ONEDRIVE_COMMERCIAL_PATH}** : Path to the folder `%OneDriveCommercial%`
+
+Replace the **{LABEL}** in the upcoming snippet as appropriate and the add it to the file `~/.bashrc`.
+
+    # Source the file ~/.bash_{USER}/bash_{USER}.sh to customize the bash shell
+    #
+    if [ -f ~/.bash_{USER}/bash_{USER}.sh ]; then
+        . ~/.bash_{USER}/bash_{USER}.sh
+    fi
+
+> **Label Definition**
+>
+> + **{USER}** : Output of the command `echo "$USER"`
+
+After applying the above mentioned changes, save and close the file `~/.bashrc`. To make the changes effective, execute, from the [Ubuntu](https://ubuntu.com/) terminal, the following command:
+
+    source ~/.bashrc
+
+##### 1.5.2.2. Bash prompt customization on the Windows Native File System
+
+The files used to accomplish my personal customization on the `Windows Native File System` are stored at the folder `%OneDriveCommercial%\dotfiles\bash-win`. If a [symlink](https://www.howtogeek.com/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/) to the folder `%OneDriveCommercial%\dotfiles` isn't yet created the Windows `%USERPROFILE%`, create executing the below command from the Windows Command Prompt.
+
+    mklink /J %USERPROFILE%\.dotfiles "%OneDriveCommercial%\dotfiles"
+
+To edit the file `~/.bashrc`, open it (or create it) with the [Nano text editor](https://www.nano-editor.org/), executing the below command on a **Git Bash** terminal:
+
+    nano ~/.bashrc
+
+Then, within the file `~/.bashrc`, paste the upcoming snippet and replace the **{LABEL}** as appropriate.
+
+    # Source the file ~/.dotfiles/bash-win/bashrc_{USER}.sh to customize the bash shell
+    if [ -f ~/.dotfiles/bash-win/bashrc_{USER}.sh ]; then
+        source ~/.dotfiles/bash-win/bashrc_{USER}.sh
+    fi
+
+> **Label Definition**
+>
+> + **{USER}** : Output of the command `echo "$USER"`
+
+After applying the above mentioned changes, save and close the file `~/.bashrc`. To make the changes effective, execute from a **Git Bash** terminal, the following command:
+
+    source ~/.bashrc
+
+#### 1.5.3. Git configuration
+
+To set [Git's global configuration](https://www.learnenough.com/git-tutorial#sec-installation_and_setup), replace the **{LABELS}** in the below commands as appropriate and then execute it in an [Git Bash](https://git-scm.com/) terminal window.
+
+    git config --global user.name "{USER_NAME}"
+    git config --global user.email {USER_EMAIL}
+    git config --global core.editor nano
+    git config --global pull.rebase true
+    git config --list
+
+> **Label Definition**
+>
+> + **{USER_NAME}** : The name of the user
+> + **{USER_EMAIL}** : The e-mail of the user
+
+Instructions for a more detailed Git global configuration can be found in the [Git's Official Documentation](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup).
+
+#### 1.5.4. SSH Keys
+
+The [SSH Protocol](https://en.wikipedia.org/wiki/Secure_Shell) is very useful to connect and authenticate to remote servers and services. The creation and setup of the SSH keys described here follows the instructions at [GitHub](https://help.github.com/en/articles/connecting-to-github-with-ssh).
+
+##### 1.5.4.1. Checking for existing SSH keys
+
+To check if the system already has an SSH key set, type the following command:
+
+    ls -al ~/.ssh
+
+If the output of the above command contains a list of files (by default, the filenames of the public keys are *id_dsa.pub*, *id_ecdsa.pub*, *id_ed25519.pub* or *id_rsa.pub*), the system already has a SSH key and it can be used.
+
+##### 1.5.4.2. Generating a new SSH key
+
+To create a new SSH key, replace the **{LABEL}** in the below command as appropriate and then execute it in an [Git Bash](https://git-scm.com/) terminal window.
+
+    ssh-keygen -t rsa -b 4096 -C "{EMAIL_ADDRESS}"
+
+> **Label Definition**
+>
+> + **{EMAIL_ADDRESS}** : The e-mail address to be used as label for the SSH key
+
+The above command creates a new SSH key, using the provided email as a label.
+
+    > Generating public/private rsa key pair.
+
+When  prompted to "Enter a file in which to save the key," press Enter to accept the default file location.
+
+    > Enter a file in which to save the key (/home/you/.ssh/id_rsa): [Press enter]
+
+Type a secure passphrase when prompted. GitHub has further instructions on [working with SSH key passphrases](https://help.github.com/en/articles/working-with-ssh-key-passphrases).
+
+    > Enter passphrase (empty for no passphrase): [Type a passphrase]
+    > Enter same passphrase again: [Type passphrase again]
+
+##### 1.5.4.3. Adding the SSH key to the ssh-agent
+
+To add the new SSH key to the `ssh-agent`, start it in the background with the command below.
+
+    eval "$(ssh-agent -s)"
+
+The command below will add the private key to the `ssh-agent`.
+
+    ssh-add ~/.ssh/id_rsa
+
+##### 1.5.4.4. Adding a new SSH key to the remote servers
+
+To be able to copy the public SSH key to the clipboard, display it in a bash terminal window with the following command:
+
+    cat ~/.ssh/id_rsa.pub
+
+Copy the output of the above command and then add the public SSH key to the remote servers in use ([GitHub](https://github.com/settings/keys), [Bitbucket](https://bitbucket.org/account/user/ssh-keys), etc.).
+
+### 1.6. KeePassXC
+
+[**KeePassXC**](https://keepassxc.org/) is a cross-platform community-driven port of the Windows application [Keepass Password Safe](https://keepass.info/) that I choose to use precisely because it's cross-platform and it allows me to use it on every operating system that I work with.
+
+#### 1.6.1. Installation
+
+To install [**KeePassXC**](https://keepassxc.org/), execute the upcoming commands on a PowerShell console.
+
+    scoop bucket add extras
+    scoop install extras/keepassxc
+
+Check if the output of the above last command shows a suggestion to install `vcredist2022`. If it does, install it executing the following command on a PowerShell console:
+
+    scoop install extras/vcredist2022
+
+Following the execution of the above command, there will be several prompts for elevated permissions which must all be be accepted to complete the installation. A restart of the machine will be necessary to complete the installation but before restarting the machine, check if the output of the installation command states that the `vcredist2022` installer can be removed. If it does, after the restart of the machine, execute the following command on a PowerShell console:
+
+    scoop uninstall extras/vcredist2022
+
+Move the `KeepassXC` shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Utility`.
+
+#### 1.6.2. Configuration
+
+Set [**KeePassXC**](https://keepassxc.org/) preferences (`Tools->Settings`) as desired but make sure to enable the `Browser Integrations`. Then, setup [KeePassXC-Browser](https://chrome.google.com/webstore/detail/keepassxc-browser/oboonakemofpalcgghocfoadofidjkkk) extension to integrate it with the machine's installation of [**KeePassXC**](https://keepassxc.org/).
