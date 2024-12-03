@@ -23,7 +23,7 @@ Move the application shortcut to the `%PROGRAMDATA%\Microsoft\Windows\Start Menu
 
 ### 2.2. Windows Start Menu
 
-To have the Windows **Start Menu** with a [strtucture similar](https://specifications.freedesktop.org/menu-spec/latest/apa.html) to the one that have on my [Lubuntu](https://lubuntu.me) machines, the following folders must be created:
+To have the Windows **Start Menu** with a [structure similar](https://specifications.freedesktop.org/menu-spec/latest/apa.html) to the one that have on my [Lubuntu](https://lubuntu.me) machines, the following folders must be created:
 
 + Audio & Video;
 + Development;
@@ -32,7 +32,7 @@ To have the Windows **Start Menu** with a [strtucture similar](https://specifica
 + Office
 + Utility
 
-To create the above listed folders on the system wide **Start Menu**, open a PowerShell console with *Administrator* privileges and execute the following commands:
+To create the above listed folders on the system wide **Start Menu**, open a Command Prompt console with *Administrator* privileges and execute the following commands:
 
     mkdir "%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Audio & Video"
     mkdir "%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Development"
@@ -41,9 +41,9 @@ To create the above listed folders on the system wide **Start Menu**, open a Pow
     mkdir "%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Office"
     mkdir "%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Utility"
 
-On the same PowerShell console, move all the Office shortcuts to the folder `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Office`.
+On the same Command Prompt console, move all the Office shortcuts to the folder `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Office`.
 
-To create the above listed folders on the system wide **Start Menu**, open a regular PowerShell console and execute the following commands:
+To create the above listed folders on the user's **Start Menu**, open a regular Command Prompt console and execute the following commands:
 
     mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Audio & Video"
     mkdir "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Development"
@@ -54,7 +54,7 @@ To create the above listed folders on the system wide **Start Menu**, open a reg
 
 ### 2.3. Power Management
 
-Keeping the Laptop plugged after the battery is fully charged affect its health significantly, therefore its is recommended to keep the battery’s charge between 20% an 80%. On the Windows 10 **Power Managent** we can setup an alarm/notifcation when the Laptop’s battery reaches a given low level. But there is no feature in Windows 10 to notify you when the battery reaches a given high level.
+Keeping the Laptop plugged after the battery is fully charged affect its health significantly, therefore its is recommended to keep the battery’s charge between 20% an 80%. On the Windows 10 **Power Management** we can setup an alarm/notification when the Laptop’s battery reaches a given low level. But there is no feature in Windows 10 to notify you when the battery reaches a given high level.
 
 [John Howard](https://learn.microsoft.com/pt-pt/archive/blogs/jhoward/), Senior Program Manager in the Hyper-V team at Microsoft, [created a script](https://learn.microsoft.com/pt-pt/archive/blogs/jhoward/get-an-alert-when-my-battery-reaches-95) that gives an alert when the battery reaches 95%. I've adapted that script to give the alert when the the battery charges reaches 80% of it's capacity and I've stored on my [OneDrive](https://www.microsoft.com/microsoft-365/onedrive/online-cloud-storage), in my `dotfiles` folder.
 
