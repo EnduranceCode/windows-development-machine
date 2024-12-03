@@ -37,7 +37,7 @@ Go through the [**Autenticação.gov App**](https://www.autenticacao.gov.pt/) co
 
 ### 3.2. Ferdium
 
-[**Ferdium**](https://ferdium.org/) is an application that helps to organize multiple web apps in one place for quick and easy access. It is very useful when, *e,g.*, you need to manage more than one [Team's](https://www.microsoft.com/microsoft-teams/group-chat-software/) account.
+[**Ferdium**](https://ferdium.org/) is an application that helps to organize multiple web apps in one place for quick and easy access. It is very useful when, *e,g.*, you need to manage more than one [Team's](https://www.microsoft.com/microsoft-teams/group-chat-software/) account. Nonetheless, [**Ferdium**](https://ferdium.org/) can be replaced (probably with advantage) by Firefox's [Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) extension.
 
 #### 3.2.1. Installation
 
