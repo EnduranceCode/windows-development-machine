@@ -948,9 +948,11 @@ With the `Settings Sync` turned on, [**Visual Studio Code**](https://code.visual
 + [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments);
 + [Data Workspace](https://marketplace.visualstudio.com/items?itemName=ms-mssql.data-workspace-vscode);
 + [Debugger for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug);
++ [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 + [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig);
 + [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint);
 + [Extension Pack for java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack);
++ [Gradle for Java]()
 + [IntelliSense for CSS class names in HTML](https://marketplace.visualstudio.com/items?itemName=Zignd.html-css-class-completion);
 + [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java);
 + [lit-html](https://marketplace.visualstudio.com/items?itemName=bierner.lit-html);
@@ -964,8 +966,12 @@ With the `Settings Sync` turned on, [**Visual Studio Code**](https://code.visual
 + [Prettier - Code Formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 + [PHP Intelliphense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client);
 + [Project Manager for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency);
++ [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance)
++ [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
++ [Python Debugger](https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy)
++ [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv)
 + [Smarty](https://marketplace.visualstudio.com/items?itemName=imperez.smarty);
-+ [SonarLint](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode);
++ [SonarQube for IDE](https://marketplace.visualstudio.com/items?itemName=SonarSource.sonarlint-vscode);
 + [Spell Right](https://marketplace.visualstudio.com/items?itemName=ban.spellright);
 + [SQL Bindings](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-bindings-vscode);
 + [SQL Database Projects](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sql-database-projects-vscode);
