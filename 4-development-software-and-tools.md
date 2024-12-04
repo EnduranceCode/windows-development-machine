@@ -573,13 +573,15 @@ Make sure that [**Rancher Desktop**](https://rancherdesktop.io/) is running (lau
 
 If everything is correct, the output of the previous command will show the **rancher-desktop** distros running on [WSL](https://learn.microsoft.com/windows/wsl/).
 
-The [**Rancher Desktop**](https://rancherdesktop.io/) installation and usage files are [stored in the following folders](https://github.com/rancher-sandbox/rancher-desktop/discussions/1551#discussioncomment-2137434):
+The [**Rancher Desktop**](https://rancherdesktop.io/) installation and usage files are stored in the following folder:
 
 + `%USERPROFILE%\AppData\Local\rancher-desktop` contains the distribution data, container images, logs, etc;
-+ `%USERPROFILE%\AppData\Roaming\rancher-desktop` contains preferences;
-+ `%USERPROFILE%\AppData\Local\Programs\Rancher Desktop` is the folder where the application is installed.
 
-To be able to run the `docker` command on the terminal, it's necessary to add your Windows user to the `docker-users` group. On a PowerShell console, execute the below command to check if the `docker-users` group exists and if your user belongs to it.
+To test if `docker` command is full functional by your user, execute the following command on a PowerShell console:
+
+    docker info
+
+If the output of the above command is detailed information about the Docker installation on your system, the docker command is fully functional and no further action is necessary. On the other hand, if you see a permission error (e.g., "Permission denied" or "Access is denied"), it means your user lacks the required privileges to run the `docker`command. On this situation, to be able to run the `docker` command on the terminal, it's necessary to add your Windows user to the `docker-users` group. On a PowerShell console, execute the below command to check if the `docker-users` group exists and if your user belongs to it.
 
     net localgroup docker-users
 
@@ -587,7 +589,6 @@ If the `docker-users` group doesn't exists yet, open a PowerShell console as *Ad
 
     New-LocalGroup -Name 'docker-users' -Description 'docker Users Group'
     Add-LocalGroupMember -Group 'Administrators' -Member ('docker-users') -Verbose
-    Add-LocalGroupMember -Group 'docker-users' -Member ('Username','Administrators') -Verbose
 
 To add your Windows user to the `docker-users` group, open a PowerShell console as *Administrator*, replace the ***{LABEL}*** in the below command as appropriate and then execute it.
 
