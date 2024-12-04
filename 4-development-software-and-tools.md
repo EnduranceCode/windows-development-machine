@@ -49,9 +49,12 @@ On the menu option `Settings->Plugins Admin...`, install the plugins [**BetterMu
 
 #### 4.2.1. Installation
 
-To install [**Meld**](https://meld.app/), download the latest version from [official downloads page](https://meld.app/). Then, execute the downloaded file (there will be a prompt for elevated permissions that must be accepted).
+To install [**Meld**](https://meld.app/), open a PowerShell console and execute the following commands:
 
-Move the [**Meld**](https://meld.app/) *Start Menu* *shortcut* to the `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Development` folder (Create the `Development` folder if it doesn't exits).
+    scoop bucket add extras
+    scoop install extras/meld
+
+Move the [**Meld**](https://meld.app/) *Start Menu* shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps` to the `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Development` folder (Create the `Development` folder if it doesn't exits).
 
 ### 4.3. Java
 
@@ -63,7 +66,7 @@ Move the [**Meld**](https://meld.app/) *Start Menu* *shortcut* to the `%PROGRAMD
 
 The easiest way to install and manage multiple versions of [**Java**](https://openjdk.org/) on the `WSL File System` is to use [SDKMAN](https://sdkman.io/). This is a free, lightweight, open-source utility written in [Bash](https://www.gnu.org/software/bash/) that provides a convenient command line interface to manage multiple versions of [**Java**](https://openjdk.org/) and also takes care of setting the necessary environment variables.
 
-Following the [official instructions](https://sdkman.io/install), install [SDKMAN](https://sdkman.io/) and the necessary dependencies executing the upcomming commands on a [Ubuntu](https://ubuntu.com/) terminal:
+Following the [official instructions](https://sdkman.io/install), install [SDKMAN](https://sdkman.io/) and the necessary dependencies executing the upcoming commands on a [Ubuntu](https://ubuntu.com/) terminal:
 
     sudo apt update
     sudo apt install zip unzip
@@ -219,7 +222,7 @@ To have more control over [**Apache Maven**](https://maven.apache.org/) versions
 
 > + **{MAVEN_FOLDER}** : The folder's name that contains the desired version, e.g. *apache-maven-3.8.6-sa3*
 
-Check the output of the upcoming commands to confirm that the the symlinnk was created as desired:
+Check the output of the upcoming commands to confirm that the the symlink was created as desired:
 
     ls -la --group-directories-first /opt/maven/
     ls -la --group-directories-first /opt/maven/current/
@@ -230,7 +233,7 @@ To set the `MAVEN_HOME` environment variable for your [WSL](https://learn.micros
 
     nano ~/.bashrc
 
-Then, add the upcoming snippet to the `~/.bashrc` imediatly before sourcing the file to customize the bash prompt.
+Then, add the upcoming snippet to the `~/.bashrc` immediately before sourcing the file to customize the bash prompt.
 
     # User's environmnent variables
     export export MAVEN_HOME=/opt/maven/current
@@ -330,9 +333,9 @@ The different parts in the above name structure, shall be replaced as explained 
 >
 > With the above examples, the settings.xml backup file name would be *settings-sa3-2020-03-21.xml*
 
-If there's no need to have a user's `settings.xml` file, the last one in use should be backuped as explain above and then deleted.
+If there's no need to have a user's `settings.xml` file, the last one in use should be backed up as explain above and then deleted.
 
-A `README.md` file must be stored on the folder `~/.m2` with a list a of all existing `settings.xml` file backups. This list must include the context of each bacuped file usage.
+A `README.md` file must be stored on the folder `~/.m2` with a list a of all existing `settings.xml` file backups. This list must include the context of each backed up file usage.
 
 ### 4.5. Apache Tomcat
 
@@ -361,7 +364,7 @@ The [**Quarkus CLI**](https://quarkus.io/guides/cli-tooling) lets you create Qua
 
 ##### 4.6.1.1. Installation on the WSL File System
 
-To install [**Quarkus CLI**](https://quarkus.io/guides/cli-tooling) on the `WSL File System`, as recomended on the [Quarkus documentation](https://quarkus.io/guides/cli-tooling), use [SDKMAN](https://sdkman.io/), execute the upcomming command on a [Ubuntu](https://ubuntu.com/) terminal.
+To install [**Quarkus CLI**](https://quarkus.io/guides/cli-tooling) on the `WSL File System`, as recommended on the [Quarkus documentation](https://quarkus.io/guides/cli-tooling), use [SDKMAN](https://sdkman.io/), execute the upcoming command on a [Ubuntu](https://ubuntu.com/) terminal.
 
     sdk install quarkus
 
@@ -448,7 +451,7 @@ If the installation was successful, the following message is returned.
 
 ##### 4.8.1.1. Installation on the WSL File System
 
-To install [**GNU Make**](https://www.gnu.org/software/make/) on the `WSL File System`, execute the upcomming command on a [Ubuntu](https://ubuntu.com/) terminal.
+To install [**GNU Make**](https://www.gnu.org/software/make/) on the `WSL File System`, execute the upcoming command on a [Ubuntu](https://ubuntu.com/) terminal.
 
     sudo apt install make
 
@@ -476,12 +479,12 @@ If you're going to do your development work on the Windows native file system, y
 
 #### 4.9.1. Pre-Installation requirements
 
-To avoid future conflicts between the ports reserved by ***Hyper-V*** and the ports used by the [**Docker**](https://www.docker.com/) containers, you should [reset the "*TCP Dynamic Port Range*"](https://medium.com/@sevenall/completely-solve-the-problem-of-docker-containers-not-starting-or-running-on-windows-10-due-to-port-57f16ed6143). That is achieved executing the uppcoming commands from a PowerShell console with *Administrator* privileges:
+To avoid future conflicts between the ports reserved by ***Hyper-V*** and the ports used by the [**Docker**](https://www.docker.com/) containers, you should [reset the "*TCP Dynamic Port Range*"](https://medium.com/@sevenall/completely-solve-the-problem-of-docker-containers-not-starting-or-running-on-windows-10-due-to-port-57f16ed6143). That is achieved executing the upcoming commands from a PowerShell console with *Administrator* privileges:
 
     netsh int ipv4 set dynamic tcp start=49152 num=16384
     netsh int ipv6 set dynamic tcp start=49152 num=16384
 
-Followinbg the execution of the above commands, reboot the computer to apply the changes made.
+Following the execution of the above commands, reboot the computer to apply the changes made.
 
 After restarting the computer, check the output of the following command:
 
@@ -493,7 +496,7 @@ The above command should now show that "*TCP Dynamic Port Range*" has been chang
 
 ##### 4.9.2.1. Installation on the WSL File System
 
-This section describes the necessary steps to install [**Docker**](https://www.docker.com/) and [Docker Engine](https://docs.docker.com/engine/) on a [WSL](https://learn.microsoft.com/windows/wsl/) [Ubuntu](https://ubuntu.com/) distribuition. The following steps are based on the [official documentation for installing Docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) with some adaptations provided by [Paul Knulst](https://www.paulsblog.dev/how-to-install-docker-without-docker-desktop-on-windows/).
+This section describes the necessary steps to install [**Docker**](https://www.docker.com/) and [Docker Engine](https://docs.docker.com/engine/) on a [WSL](https://learn.microsoft.com/windows/wsl/) [Ubuntu](https://ubuntu.com/) distribution. The following steps are based on the [official documentation for installing Docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) with some adaptations provided by [Paul Knulst](https://www.paulsblog.dev/how-to-install-docker-without-docker-desktop-on-windows/).
 
 On your [Ubuntu](https://ubuntu.com/) submodule of [WSL](https://learn.microsoft.com/windows/wsl/), install the required dependencies with the following commands:
 
@@ -511,7 +514,7 @@ To add the [**Docker**](https://www.docker.com/) stable repository, execute the 
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     sudo apt update
 
-Install the latetst version of the [**Docker**](https://www.docker.com/)'s packages with the following command:
+Install the latest version of the [**Docker**](https://www.docker.com/)'s packages with the following command:
 
     sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
@@ -529,7 +532,7 @@ Check the installed versions using the following commands
     dockerd --version
     docker compose version
 
-On [Ubuntu](https://ubuntu.com/), the Docker service starts on boot by default, therefore, it won't be necessary to enable it. To verify that `docker` and `containerd` were started bu *systemd*, run the following commands:
+On [Ubuntu](https://ubuntu.com/), the Docker service starts on boot by default, therefore, it won't be necessary to enable it. To verify that `docker` and `containerd` were started by *systemd*, run the following commands:
 
     sudo systemctl status docker.service
     sudo systemctl status containerd.service
@@ -656,7 +659,7 @@ To install [**Terraform**](https://www.terraform.io/) on the `Windows Native Fil
 
     scoop install main/terraform
 
-Using [Scoop](https://scoop.sh/), it's possible to [install a specifc version](https://github.com/ScoopInstaller/Scoop/wiki/FAQ#how-do-i-install-a-specific-version-of-an-app) of an app. To do that for [**Terraform**](https://www.terraform.io/), replace the ***{LABEL}*** in the below command as appropriate and then execute it on a [Git Bash](https://git-scm.com/) terminal.
+Using [Scoop](https://scoop.sh/), it's possible to [install a specific version](https://github.com/ScoopInstaller/Scoop/wiki/FAQ#how-do-i-install-a-specific-version-of-an-app) of an app. To do that for [**Terraform**](https://www.terraform.io/), replace the ***{LABEL}*** in the below command as appropriate and then execute it on a [Git Bash](https://git-scm.com/) terminal.
 
     scoop install terraform@ {VERSION}
 
