@@ -88,9 +88,12 @@ Move the `PDFsam Basic` shortcut from the folder `C:\Users\rferrcan\AppData\Roam
 
 #### 3.6.1. Installation
 
-Download [**SpeedCrunch**](http://www.speedcrunch.org) portable archive from the [official downloads page](https://heldercorreia.bitbucket.io/speedcrunch/download.html). Then extract the downloaded archive and move the extracted folder to the `%USERPROFILE%\AppData\Local\` folder (`%LOCALAPPDATA%`). Rename the new folder to `SpeedCrunch`.
+To install [**SpeedCrunch**](http://www.speedcrunch.org), execute the upcoming commands on a PowerShell console.
 
-Inside the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Tools`, create a *shortcut* pointing to the file `%USERPROFILE%\AppData\Local\SpeedCrunch\speedcrunch.exe` and name it (the *shortcut*) `SpeedCrunch`. Then, edit the *shortcut* and point its icon to the main icon available on the file `%USERPROFILE%\AppData\Local\SpeedCrunch\speedcrunch.exe`.
+    scoop bucket add extras
+    scoop install extras/speedcrunch
+
+Move the `SpeedCrunch` shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Utility`.
 
 If the keyboard in use has a special key to start a calculator, edit the [Windows Registry](https://learn.microsoft.com/troubleshoot/windows-server/performance/windows-registry-advanced-users) to assign [**SpeedCrunch**](http://www.speedcrunch.org) to the mentioned key.
 
