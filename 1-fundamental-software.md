@@ -468,7 +468,7 @@ Following the execution of the above command, there will be several prompts for 
 
     scoop uninstall extras/vcredist2022
 
-Move the `KeepassXC` shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Utility`.
+Move the [**KeePassXC**](https://keepassxc.org/) *Start Menu* shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Utility` (Create the `Utility` folder if it doesn't exits).
 
 #### 1.6.2. Configuration
 

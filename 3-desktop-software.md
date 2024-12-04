@@ -80,7 +80,7 @@ To install [**PDFsam Basic**](https://pdfsam.org/pdfsam-basic/), execute the upc
     scoop bucket add extras
     scoop install extras/pdfsam
 
-Move the `PDFsam Basic` shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Office`.
+Move the [**PDFsam Basic**](https://pdfsam.org/pdfsam-basic/) *Start Menu* shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Office` (Create the `Office` folder if it doesn't exits).
 
 ### 3.6. SpeedCrunch
 
@@ -93,7 +93,7 @@ To install [**SpeedCrunch**](http://www.speedcrunch.org), execute the upcoming c
     scoop bucket add extras
     scoop install extras/speedcrunch
 
-Move the `SpeedCrunch` shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Utility`.
+Move the [**SpeedCrunch**](http://www.speedcrunch.org) *Start Menu* shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps` to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Utility` (Create the `Utility` folder if it doesn't exits).
 
 If the keyboard in use has a special key to start a calculator, edit the [Windows Registry](https://learn.microsoft.com/troubleshoot/windows-server/performance/windows-registry-advanced-users) to assign [**SpeedCrunch**](http://www.speedcrunch.org) to the mentioned key.
 
@@ -115,10 +115,9 @@ VLC is a free and open source cross-platform multimedia player and framework tha
 
 #### 3.8.1. Installation
 
-To install [**VLC**](https://www.videolan.org/), open a PowerShell console and execute the upcoming command to execute the installation from the [Microsoft Store](https://apps.microsoft.com/detail/XPDM1ZW6815MQM).
+To install [**VLC**](https://www.videolan.org/), open a PowerShell console and execute the following commands:
 
-    winget install XPDM1ZW6815MQM -s msstore
+    scoop bucket add extras
+    scoop install extras/vlc
 
-The [**VLC**](https://www.videolan.org/) intaller will [require elevation](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works) to finalize the process and, therefore, Windows will prompt you to [elevate](https://learn.microsoft.com/en-us/windows/security/application-security/application-control/user-account-control/how-it-works#the-uac-user-experience). If you choose not to elevate, the application will fail to install/upgrade.
-
-Move the [**VLC**](https://www.videolan.org/) *Start Menu* shortcut to the `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Audio & Video` folder (Create the `Audio & Video` folder if it doesn't exits). Then delete the folder `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\VideoLAN`, including the rest of its contents.
+Move the [**VLC**](https://www.videolan.org/) *Start Menu* shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps` to the `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Audio & Video` folder (Create the `Audio & Video` folder if it doesn't exits).
