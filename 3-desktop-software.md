@@ -75,9 +75,12 @@ To install [**Inkscape**](https://inkscape.org/), open a PowerShell console and 
 
 #### 3.5.1. Installation
 
-Download [**PDFsam Basic**](https://pdfsam.org/pdfsam-basic/) portable archive from the [official downloads page](https://pdfsam.org/download-pdfsam-basic/). Then extract the downloaded archive and move the folder it contains to the `%USERPROFILE%\AppData\Local\` folder (`%LOCALAPPDATA%`). Rename the new folder to `PDFsam`.
+To install [**PDFsam Basic**](https://pdfsam.org/pdfsam-basic/), execute the upcoming commands on a PowerShell console.
 
-Inside the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Tools`, create a *shortcut* pointing to the file `%USERPROFILE%\AppData\Local\PDFsam\pdfsam.exe` and name it (the *shortcut*) `PDFsam`. Then, edit the *shortcut* and point its icon to the main icon available on the file `%USERPROFILE%\AppData\Local\PDFsam\pdfsam.exe`.
+    scoop bucket add extras
+    scoop install extras/pdfsam
+
+Move the `PDFsam Basic` shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps`to the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Office`.
 
 ### 3.6. SpeedCrunch
 
