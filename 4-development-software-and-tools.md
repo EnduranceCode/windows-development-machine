@@ -30,13 +30,14 @@ This file contains the **Development Software and Tools** section of my [Setup g
 
 #### 4.1.1. Installation
 
-[Download](https://notepad-plus-plus.org/downloads/) the latest portable version of [**Notepad++**](https://notepad-plus-plus.org/). Then extract the downloaded archive to the `%USERPROFILE%\AppData\Local\` folder (`%LOCALAPPDATA%`). Rename the new folder to `Notepad++`.
+To install [**Notepad++**](https://notepad-plus-plus.org/), open a PowerShell console and execute the following commands:
 
-Inside the folder `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Development`, create a *shortcut* pointing to the file `%USERPROFILE%\AppData\Local\KeepassXC\KeePassXC.exe` and name it (the *shortcut*) `KeepassXC`. Then, edit the *shortcut* and point its icon to the main icon available on the file `%USERPROFILE%\AppData\Local\Notepad++\notepad++.exe`.
+    scoop bucket add extras
+    scoop install extras/notepadplusplus
+
+Move the [**Notepad++**](https://notepad-plus-plus.org/) *Start Menu* shortcut from the folder `C:\Users\rferrcan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Scoop Apps` to the `%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Development` folder (Create the `Development` folder if it doesn't exits).
 
 #### 4.1.2. Configuration
-
-To replicate on [**Notepad++**](https://notepad-plus-plus.org/) the standard *Quit* Linux keyboard shortcut, select the menu option `Settings->Shortcut Mapper...`, change the existing shortcut *CTRL+Q* to *CTRL+W* and then change the previous existing shortcut *CTRL+W* to *CTRL+Q*. Repeat the process for the existing shortcuts *CTRL+SHIFT+Q* and *CTRL+SHIFT+W*.
 
 On the menu option `Settings->Plugins Admin...`, install the plugins [**BetterMultiSelection**](https://github.com/dail8859/BetterMultiSelection), [**DSpellCheck**](https://github.com/Predelnik/DSpellCheck), [Json Tools](https://github.com/molsonkiko/JsonToolsNppPlugin) and [**XML Tools**](https://github.com/morbac/xmltools).
 
